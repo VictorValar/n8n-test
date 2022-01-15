@@ -1,0 +1,25 @@
+#Docker
+.docker
+Dockerfile
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+.pytest_cache
+app/__pycache__/
+app/*/__pycache__/
+app/*/*/__pycache__/
+app/*/*/*/__pycache__/
+
+
+#Git
+.git
+.gitignore
+
+# Misc
+.env/
+.venv/
+venv/
+README.md
