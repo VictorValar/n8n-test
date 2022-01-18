@@ -6,13 +6,15 @@ ENV PYTHONUNBUFFERED True
 # Install production dependencies.
 COPY ./requirements.txt /requirements.txt
 # RUN pip3 install -r requirements.txt
-RUN apk update -y && \
-    apk upgrade -y && \
-    pip3 install --upgrade pip && \
-    pip3 install -r /requirements.txt
-
-COPY ./app /app
-WORKDIR /app
+RUN pip3 install --upgrade pip && \
+    pip3 install -r /requirements.txt 
+    # pip3 install --upgrade --force-reinstall --no-cache-dir docker-compose && ln -sf /usr/local/bin/docker-compose /usr/bin/docker-compose
+# RUN apk update && apk upgrade && apk add docker-compose
+ENV APP_HOME /app
+WORKDIR $APP_HOME
+COPY . ./
+WORKDIR /
+ENTRYPOINT ["docker-compose","up"]
 
 
 

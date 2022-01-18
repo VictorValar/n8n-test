@@ -1,0 +1,9 @@
+runtime: custom
+env: flex
+resources:
+  cpu: 2
+  memory_gb: 1.4
+  disk_size_gb: 10
+manual_scaling:
+  instances: 1
+# entrypoint: gunicorn -b :$PORT --chdir app/ app.wsgi:application

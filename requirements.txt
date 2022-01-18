@@ -1,3 +1,5 @@
-gunicorn
-google-cloud-secret-manager
-google-cloud-ndb
+# wheel
+# gunicorn
+# docker-compose
+# google-cloud-secret-manager
+# google-cloud-ndb
