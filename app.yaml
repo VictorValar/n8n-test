@@ -6,4 +6,4 @@ resources:
   disk_size_gb: 10
 manual_scaling:
   instances: 1
-# entrypoint: gunicorn -b :$PORT --chdir app/ app.wsgi:application
+entrypoint: gunicorn -b :$PORT --chdir app/ app.wsgi:application
